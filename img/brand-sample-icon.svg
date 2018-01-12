@@ -1,0 +1,32 @@
+<svg width="70" height="70" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Page 1</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-9241 -1846)">
+<g id="Page 1">
+<g id="Fill 1">
+<use xlink:href="#path0_fill" transform="translate(9260.08 1859.98)" fill="#2E3131"/>
+</g>
+<g id="Fill 3">
+<use xlink:href="#path1_fill" transform="translate(9244.14 1889.87)" fill="#51C7E8"/>
+</g>
+<g id="Fill 5">
+<use xlink:href="#path2_fill" transform="translate(9244.14 1894.36)" fill="#01AAC4"/>
+</g>
+<mask id="mask0_outline" mask-type="alpha">
+<g id="Clip 8">
+<use xlink:href="#path3_fill" transform="translate(9241 1846)" fill="#FFFFFF"/>
+</g>
+</mask>
+<g id="Fill 7" mask="url(#mask0_outline)">
+<use xlink:href="#path4_fill" transform="translate(9241 1846)" fill="#2E3131"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 9.229 7.40112L 9.229 18.2511L 15.945 18.2511C 17.8134 18.2511 19.2861 17.784 20.2917 16.8498C 21.3336 15.8792 21.8357 14.5505 21.8357 12.7548C 21.8357 11.029 21.3336 9.7367 20.2917 8.80247C 19.2861 7.86824 17.8134 7.40112 15.945 7.40112L 9.229 7.40112ZM 9.22923 27.9502C 6.42789 27.5194 3.37481 27.304 0 27.3754L 0 0L 15.9452 0C 20.615 0 24.2065 1.11462 26.7925 3.26981C 29.3421 5.46135 30.6358 8.51442 30.6358 12.4304C 30.6358 15.089 30.0973 17.3883 29.019 19.3281C 27.9421 21.2679 26.3617 22.7769 24.3142 23.8552L 30.6721 33.8423C 26.8288 33.0885 22.9492 31.5794 18.4962 30.1781L 16.0906 25.616L 15.8752 25.616L 9.22923 25.616L 9.22923 27.9502Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 0.180385 2.72993C 35.5573 -7.68795 43.4579 16.0232 63.3931 2.72993L 63.2127 22.4888L 0 22.4888L 0.180385 2.72993Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 0.180385 2.72993C 35.5573 -7.68795 43.4579 16.0232 63.3931 2.72993L 63.2127 17.1163L 0 17.1163L 0.180385 2.72993Z"/>
+<path id="path3_fill" fill-rule="evenodd" d="M 0 69.8465L 69.8465 69.8465L 69.8465 0L 0 0L 0 69.8465Z"/>
+<path id="path4_fill" fill-rule="evenodd" d="M 6.63379 63.2302L 63.2113 63.2302L 63.2113 6.61768L 6.63379 6.61768L 6.63379 63.2302ZM 0 0L 3.31692 0L 66.5283 0L 69.8452 0L 69.8452 3.30885L 69.8452 66.5377L 69.8452 69.8465L 66.5283 69.8465L 3.31692 69.8465L 0 69.8465L 0 66.5377L 0 3.30885L 0 0Z"/>
+</defs>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="19" height="11" viewBox="0 0 19 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>slider-right</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-9723 -3567)">
+<g id="slider-right">
+<g id="Line Copy 2">
+<use xlink:href="#path0_stroke" transform="translate(9724 3571)" fill="#989898"/>
+</g>
+<g id="Path 2 Copy 2">
+<use xlink:href="#path1_stroke" transform="translate(9736 3568)" fill="#989898"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" d="M 15.6154 2.11538L 16.1154 2.11538L 16.1154 1.11538L 15.6154 1.11538L 15.6154 2.11538ZM 0.385392 1.11538L -0.114608 1.11538L -0.114608 2.11538L 0.385392 2.11538L 0.385392 1.11538ZM 15.6154 1.11538L 0.385392 1.11538L 0.385392 2.11538L 15.6154 2.11538L 15.6154 1.11538Z"/>
+<path id="path1_stroke" d="M 4.69524 4.78384L 5.05101 5.13516L 5.39688 4.78491L 5.05208 4.43361L 4.69524 4.78384ZM -0.356843 0.350233L 4.33839 5.13407L 5.05208 4.43361L 0.356843 -0.350233L -0.356843 0.350233ZM 4.33947 4.43252L -0.204856 9.03442L 0.506689 9.73706L 5.05101 5.13516L 4.33947 4.43252Z"/>
+</defs>
+</svg>

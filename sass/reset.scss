@@ -16,7 +16,7 @@ textarea                       { vertical-align:top; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:16px Roboto, sans-serif; color: #111111; text-decoration:none; -webkit-transition:0.3s; transition: 0.3s;}
+a:link, a:visited              { text-decoration:none; color: #111111; -webkit-transition:0.3s; transition: 0.3s;}
 a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
