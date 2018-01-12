@@ -81,7 +81,7 @@ section {
 .header-main {
     width: 100%;
     position: absolute;
-    padding: 60px 0 20px;
+    padding: 60px 10px 20px;
     
     &--static {
         position: static;
@@ -184,7 +184,7 @@ section {
 
 .innerPage-heading {
     background: url(../img/kuvio-background_v2.jpg) no-repeat center center / cover;
-    padding: 270px 0 190px;
+    padding: 270px 10px 190px;
     &__page-description {
         padding: 0 0 0 70px;
         display: block;
@@ -713,11 +713,29 @@ section {
     }
 }
 
+/** THIS WAY **/
+.next-page-section {
+    background: #f8f8f8;
+    text-align: center;
+    text-transform: uppercase;
+    
+    &__this-way {
+        display: block;
+        font-size: 10px;
+        margin-bottom: 40px;
+    }
+    &__page {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+}
+
 /**Footer**/
 
 .footer-main {
     background: #222;
-    padding: 100px 0;
+    padding: 100px 10px;
     color: #fff;
     
     .container {
