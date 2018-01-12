@@ -181,6 +181,55 @@ section {
     }
 }
 
+.portfolio-section {
+    
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 48%;
+        margin-bottom: 40px;
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        height: 400px;
+        background: #d8d8d8;
+        margin-bottom: 30px;
+    }
+    &__info {
+        padding-left: 70px; 
+        color: #111;
+    }
+    &__title {
+        font-size: 10px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    &__title::before {
+        display: block;
+        content: '';
+        width: 50px;
+        height: 1px;
+        background: #EA5E47;
+        position: absolute;
+        top: 7px;
+        left: -70px;
+    }
+    &__header {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    &__description {
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
 .about-section {
     position: relative;
     padding: 0;
@@ -336,7 +385,45 @@ section {
         line-height: 1.33;
         margin: 15px 0 0;
     }
+    
+    &__services,
+    &__categories {
+        padding: 20px 0 0 70px;
+        
+        &-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #999;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        &-link {
+            font-weight: 500;
+            line-height: 25px;
+        }
+    }
+    &__services {
+        float: left;
+        padding-left: 70px;
+        margin-right: 120px;
+    }
+    &__categories {
+        &-flex {
+            display: flex;
+            flex-flow: column wrap;
+            height: 126px;
+            width: 420px;
+        }
+        &-item {
+            flex-basis: 20%;
+        }
+    }
 }
+.portfolio-heading {
+    padding-bottom: 80px;
+}
+
 /**Material input***/
 
 .material-input {
