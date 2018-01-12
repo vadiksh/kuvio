@@ -58,6 +58,32 @@ section {
         margin: 0 20px 0 0;
     }
 }
+.section-pagination {
+    text-align: center;
+    display: block;
+    position: relative;
+    font-size: 10px;
+    
+    &__prev {
+        padding: 10px 10px 10px 40px;
+        background: url('../img/slider-left.svg') no-repeat 0 10px;
+        color: #999 !important;
+    }
+    &__next {
+        padding: 10px 40px 10px 10px;
+        background: url('../img/slider-right.svg') no-repeat 100% 10px;
+        color: #999 !important;
+    }
+    &--active {
+        color: #111 !important;
+    }
+    &::before {
+        display: block;
+        content: '_';
+        transform: translateY(9px);
+    }
+}
+
 /*Pages*/
 
 .inline-section-header {
@@ -204,25 +230,14 @@ section {
         color: #111;
     }
     &__title {
-        font-size: 10px;
-        font-weight: 500;
         margin-bottom: 20px;
-        position: relative;
-    }
-    &__title::before {
-        display: block;
-        content: '';
-        width: 50px;
-        height: 2px;
-        background: #EA5E47;
-        position: absolute;
-        top: 6px;
-        left: -70px;
+        transform: translateX(-70px);
     }
     &__header {
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 20px;
+        letter-spacing: -0.1px;
     }
     &__description {
         font-weight: 400;
@@ -327,48 +342,6 @@ section {
             display: inline-block;
             margin-right: 40px;
         }
-        &-pagination {
-            text-align: center;
-            display: block;
-            position: relative;
-            
-            &-prev,
-            &-next {
-                position: relative;
-                padding: 0 10px;
-                font-size: 10px;
-                color: #999 !important;
-            }
-            &--active {
-                color: #111 !important;
-            }
-            &-prev::before,
-            &-next::after {
-                display: block;
-                content: '';
-                width: 20px;
-                height: 10px;
-                background: #333;
-                position: absolute;
-            }
-            &-prev::before {
-                background: url('../img/slider-left.svg');
-                left: -30px;
-                top: 1px;
-            }
-            &-next::after {
-                background: url('../img/slider-right.svg');
-                right: -30px;
-                top: 1px;
-            }
-        }
-        &-pagination::after {
-            display: block;
-            content: '_';
-            color: #999;
-            position: relative;
-            top: -27px;
-        }
     }
 }
 .blog-section {
@@ -392,69 +365,13 @@ section {
         color: #111;
     }
     &__date {
-        display: block;
-        position: relative;
-        font-size: 10px;
-        letter-spacing: 0.5px;
-        font-weight: 500;
-        margin-bottom: 20px;
-    }
-    &__date::before {
-        display: block;
-        content: '';
-        width: 50px;
-        height: 2px;
-        background: #EA5E47;
-        position: absolute;
-        top: 6px;
-        left: -70px;
+        margin-bottom: 20px; 
+        transform: translateX(-70px);
     }
     &__title {
         font-size: 20px;
         font-weight: 500;
     }
-    &__pagination {
-            text-align: center;
-            display: block;
-            position: relative;
-            
-            &-prev,
-            &-next {
-                position: relative;
-                padding: 0 10px;
-                font-size: 10px;
-                color: #999 !important;
-            }
-            &--active {
-                color: #111 !important;
-            }
-            &-prev::before,
-            &-next::after {
-                display: block;
-                content: '';
-                width: 20px;
-                height: 10px;
-                background: #333;
-                position: absolute;
-            }
-            &-prev::before {
-                background: url('../img/slider-left.svg');
-                left: -30px;
-                top: 1px;
-            }
-            &-next::after {
-                background: url('../img/slider-right.svg');
-                right: -30px;
-                top: 1px;
-            }
-        }
-        &__pagination::after {
-            display: block;
-            content: '_';
-            color: #999;
-            position: relative;
-            top: -27px;
-        }
 }
 
 /*****Inner pages intro*****/

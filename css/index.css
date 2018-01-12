@@ -148,6 +148,26 @@ section {
     vertical-align: middle;
     margin: 0 20px 0 0; }
 
+.section-pagination {
+  text-align: center;
+  display: block;
+  position: relative;
+  font-size: 10px; }
+  .section-pagination__prev {
+    padding: 10px 10px 10px 40px;
+    background: url("../img/slider-left.svg") no-repeat 0 10px;
+    color: #999 !important; }
+  .section-pagination__next {
+    padding: 10px 40px 10px 10px;
+    background: url("../img/slider-right.svg") no-repeat 100% 10px;
+    color: #999 !important; }
+  .section-pagination--active {
+    color: #111 !important; }
+  .section-pagination::before {
+    display: block;
+    content: '_';
+    transform: translateY(9px); }
+
 /*Pages*/
 .inline-section-header {
   position: relative; }
@@ -265,23 +285,13 @@ section {
   padding-left: 70px;
   color: #111; }
 .portfolio-section__title {
-  font-size: 10px;
-  font-weight: 500;
   margin-bottom: 20px;
-  position: relative; }
-.portfolio-section__title::before {
-  display: block;
-  content: '';
-  width: 50px;
-  height: 2px;
-  background: #EA5E47;
-  position: absolute;
-  top: 6px;
-  left: -70px; }
+  transform: translateX(-70px); }
 .portfolio-section__header {
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  letter-spacing: -0.1px; }
 .portfolio-section__description {
   font-weight: 400;
   font-size: 16px; }
@@ -358,38 +368,6 @@ section {
   .about-section__team-img {
     display: inline-block;
     margin-right: 40px; }
-  .about-section__team-pagination {
-    text-align: center;
-    display: block;
-    position: relative; }
-    .about-section__team-pagination-prev, .about-section__team-pagination-next {
-      position: relative;
-      padding: 0 10px;
-      font-size: 10px;
-      color: #999 !important; }
-    .about-section__team-pagination--active {
-      color: #111 !important; }
-    .about-section__team-pagination-prev::before, .about-section__team-pagination-next::after {
-      display: block;
-      content: '';
-      width: 20px;
-      height: 10px;
-      background: #333;
-      position: absolute; }
-    .about-section__team-pagination-prev::before {
-      background: url("../img/slider-left.svg");
-      left: -30px;
-      top: 1px; }
-    .about-section__team-pagination-next::after {
-      background: url("../img/slider-right.svg");
-      right: -30px;
-      top: 1px; }
-  .about-section__team-pagination::after {
-    display: block;
-    content: '_';
-    color: #999;
-    position: relative;
-    top: -27px; }
 
 .blog-section__list {
   display: flex;
@@ -406,56 +384,11 @@ section {
   padding-left: 70px;
   color: #111; }
 .blog-section__date {
-  display: block;
-  position: relative;
-  font-size: 10px;
-  letter-spacing: 0.5px;
-  font-weight: 500;
-  margin-bottom: 20px; }
-.blog-section__date::before {
-  display: block;
-  content: '';
-  width: 50px;
-  height: 2px;
-  background: #EA5E47;
-  position: absolute;
-  top: 6px;
-  left: -70px; }
+  margin-bottom: 20px;
+  transform: translateX(-70px); }
 .blog-section__title {
   font-size: 20px;
   font-weight: 500; }
-.blog-section__pagination {
-  text-align: center;
-  display: block;
-  position: relative; }
-  .blog-section__pagination-prev, .blog-section__pagination-next {
-    position: relative;
-    padding: 0 10px;
-    font-size: 10px;
-    color: #999 !important; }
-  .blog-section__pagination--active {
-    color: #111 !important; }
-  .blog-section__pagination-prev::before, .blog-section__pagination-next::after {
-    display: block;
-    content: '';
-    width: 20px;
-    height: 10px;
-    background: #333;
-    position: absolute; }
-  .blog-section__pagination-prev::before {
-    background: url("../img/slider-left.svg");
-    left: -30px;
-    top: 1px; }
-  .blog-section__pagination-next::after {
-    background: url("../img/slider-right.svg");
-    right: -30px;
-    top: 1px; }
-.blog-section__pagination::after {
-  display: block;
-  content: '_';
-  color: #999;
-  position: relative;
-  top: -27px; }
 
 /*****Inner pages intro*****/
 .innerPage-heading {
