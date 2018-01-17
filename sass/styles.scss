@@ -20,7 +20,7 @@ a.btn, .btn {
     cursor: pointer;
     
     &-default {
-        background: $btn-primary-color url('../img/arrow-right-white.svg') no-repeat 90% center;
+        background: $btn-primary-color url('../img/arrow-right-white.svg') no-repeat 83% center;
         color: #fff;
         padding: 0 60px 0 20px;
     }
@@ -58,6 +58,19 @@ section {
         margin: 0 20px 0 0;
     }
 }
+.text {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    
+    p {
+        margin-bottom: 40px;
+    }
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
 .section-pagination {
     text-align: center;
     display: block;
@@ -145,66 +158,313 @@ section {
     background: url('../img/kuvio-background_v2.jpg') no-repeat center center / cover;
     min-height: 600px;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-content: center;
     h1 {
         font-size: 36px;
         font-weight: 500;
+        margin-bottom: 40px;
+    }
+    &__btn {
+        width: 140px;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff !important;
+        background: $btn-primary-color;
     }
 }
-.services-list {
-    overflow: hidden;
-    width: 100%;
-    li {
-        width: 33.3333%;
-        float: left;
-        padding: 41.6666% 0 0;
+.services-section {
+    padding: 0;
+    
+    &__list {
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+    }    
+    &__item {
         position: relative;
-        &::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
-            width: 1px;
-            background: #D8D8D8;
-        }
-        .services-item_inner {
-            position: absolute;
-            top: 0;
-            left: 0;
+        color: #fff;
+        min-height: 600px;
+        width: 33.3333%;
+        
+        &-overlay {
             width: 100%;
             height: 100%;
-        }
-        .service-overlay {
-            width: 100%;
-            height: 100%;
-            position: absolute;
             top: 0;
             left: 0;
-            background: rgba($btn-dark, 0.8);
-            padding: 50px;
+            background: rgba(17, 17, 17, 0.8);
+            padding: 40px 40px 120px;
+            border-right: 1px solid rgba(216, 216, 216, 0.5);
         }
-        .service-item_counter {
+        &-counter {
+            display: block;
             font-size: 10px;
             font-weight: 500;
-            margin: 0 0 40px;
+            margin-bottom: 50px;
         }
-        h2 {
+        &-title {
             font-size: 20px;
             font-weight: 500;
+            position: relative;
+            width: 220px;
         }
-        .services-list_item-btn {
+        &-title::after {
+            display: block;
+            content: '';
+            width: 50px;
+            height: 2px;
+            background: $btn-primary-color;
+            margin: 45px 0;
+            transition-duration: 0.3s;
+            opacity: 0;
+        }
+        &-text {
+            display: block;
+            line-height: 25px;
+            font-size: 16px;
+            transition-duration: 0.3s;
+            opacity: 0;
+        }
+        &-btn {
             position: absolute;
             bottom: 50px;
-            left: 50px;
-        }
-        img {
-            width: 100%;
-            height: auto;
         }
     }
+    &__item:hover {
+        .services-section__item-title::after {
+            opacity: 1;
+            transition-duration: .3s;
+        }
+        .services-section__item-text {
+            opacity: 1;
+            transition-duration: .3s;
+        }
+    }
+    &__item-development {
+        &-overlay {
+            border: none;
+        }
+    }
+    $services-item-bg: "brand" "design" "development";
+
+    @each $item-bg in $services-item-bg {
+        &__item-#{$item-bg} {
+            background: url(../img/#{$item-bg}.jpg) no-repeat center center/cover;
+            
+        }
+    }
+}
+.portfolio-homepage {
+    margin-bottom: -20px;
+    padding: 0;
+    position: relative;
+/*     overflow: hidden; */
+    
+    &__list {
+        width: 300%;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 600px;
+    }
+    &__item {
+        width: 100%;
+        background: url("../img/EP_BusinessCard.jpg") no-repeat center center/cover;
+        padding-top: 90px;
+    }
+    &__content {
+        width: 440px;
+        background: #fff;
+        padding: 50px 60px;
+    }
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__tags {
+        display: block;
+        margin-bottom: 40px;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    &__text {
+        margin-bottom: 40px;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 500;
+    }
+    &__next-box {
+        width: 250px;
+        height: 600px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url('../img/citeblue_features.png');
+        cursor: pointer;
+    }
+    &__next-overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(17, 17, 17, 0.8);
+    }
+    &__next-btn {
+        border: none;
+        background: none;
+        padding: 0;
+        color: #fff;
+        position: absolute;
+        bottom: 20px;
+        left: 25px;
+        
+        .next {
+            display: block;
+            text-align: left;
+            font-size: 10px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .next::after {
+            content: '';
+            width: 15px;
+            height: 9px;
+            background: url('../img/arrow-right-white.svg');
+            position: absolute;
+            right: 0;
+            top: 3px;
+        }
+        .next-name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    &__nav {
+        display: block;
+        text-align: center;
+        position: relative;
+        bottom: 45px;
+        
+        &-item {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+        }
+        &-item--active::before {
+            display: block;
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+        }
+    }
+}
+.team-section {
+    
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 24%;
+        margin-bottom: 20px;
+        
+        img {
+            width: 100%;
+        }
+    }
+     .inline-section-header {
+        margin-bottom: 50px;
+        position: relative;
+
+        .title-small-lined {
+            position: relative;
+            padding: 0;
+            width: 200px;
+            background: #fff;
+            z-index: 2;
+        }
+        &_link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 0 0 20px;
+            z-index: 2;
+        }
+        &_link::after {
+            display: inline-block;
+            content: '';
+            width: 15px;
+            height: 9px;
+            background: url('../img/arrow-right-orange.svg');
+            margin-left: 20px;
+        }
+    } 
+    .inline-section-header::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: rgba(216, 216, 216, 0.5);
+        z-index: 1;
+        position: absolute;
+        top: 6px;
+    }
+}
+.what-we-do-section {
+    position: relative;
+    padding-top: 0;
+    
+    .right {
+        p {
+            margin-bottom: 50px;
+            font-size: 36px;
+            line-height: 42px;
+            font-weight: 500;
+        }
+    }
+    
+    .inline-section-header {
+        margin-bottom: 50px;
+        height: 14px;
+
+        &_link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 0 0 20px;
+            z-index: 2;
+        }
+        &_link::after {
+            display: inline-block;
+            content: '';
+            width: 15px;
+            height: 9px;
+            background: url('../img/arrow-right-orange.svg');
+            margin-left: 20px;
+        }
+    } 
+    .inline-section-header::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: rgba(216, 216, 216, 0.5);
+        z-index: 1;
+        position: absolute;
+        top: 6px;
+    }
+    
 }
 
 .portfolio-section {

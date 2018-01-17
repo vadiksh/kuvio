@@ -115,7 +115,7 @@ a.btn, .btn {
   display: inline-block;
   cursor: pointer; }
   a.btn-default, .btn-default {
-    background: #EA5E47 url("../img/arrow-right-white.svg") no-repeat 90% center;
+    background: #EA5E47 url("../img/arrow-right-white.svg") no-repeat 83% center;
     color: #fff;
     padding: 0 60px 0 20px; }
 
@@ -147,6 +147,15 @@ section {
     background: #EA5E47;
     vertical-align: middle;
     margin: 0 20px 0 0; }
+
+.text {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400; }
+  .text p {
+    margin-bottom: 40px; }
+  .text p:last-of-type {
+    margin-bottom: 0; }
 
 .section-pagination {
   text-align: center;
@@ -216,57 +225,251 @@ section {
   background: url("../img/kuvio-background_v2.jpg") no-repeat center center/cover;
   min-height: 600px;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-content: center; }
   .page-intro-section h1 {
     font-size: 36px;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-bottom: 40px; }
+  .page-intro-section__btn {
+    width: 140px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff !important;
+    background: #EA5E47; }
 
-.services-list {
-  overflow: hidden;
-  width: 100%; }
-  .services-list li {
-    width: 33.3333%;
-    float: left;
-    padding: 41.6666% 0 0;
-    position: relative; }
-    .services-list li::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: 1px;
-      background: #D8D8D8; }
-    .services-list li .services-item_inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
-    .services-list li .service-overlay {
+.services-section {
+  padding: 0; }
+  .services-section__list {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap; }
+  .services-section__item {
+    position: relative;
+    color: #fff;
+    min-height: 600px;
+    width: 33.3333%; }
+    .services-section__item-overlay {
       width: 100%;
       height: 100%;
-      position: absolute;
       top: 0;
       left: 0;
       background: rgba(17, 17, 17, 0.8);
-      padding: 50px; }
-    .services-list li .service-item_counter {
+      padding: 40px 40px 120px;
+      border-right: 1px solid rgba(216, 216, 216, 0.5); }
+    .services-section__item-counter {
+      display: block;
       font-size: 10px;
       font-weight: 500;
-      margin: 0 0 40px; }
-    .services-list li h2 {
+      margin-bottom: 50px; }
+    .services-section__item-title {
       font-size: 20px;
-      font-weight: 500; }
-    .services-list li .services-list_item-btn {
+      font-weight: 500;
+      position: relative;
+      width: 220px; }
+    .services-section__item-title::after {
+      display: block;
+      content: '';
+      width: 50px;
+      height: 2px;
+      background: #EA5E47;
+      margin: 45px 0;
+      transition-duration: 0.3s;
+      opacity: 0; }
+    .services-section__item-text {
+      display: block;
+      line-height: 25px;
+      font-size: 16px;
+      transition-duration: 0.3s;
+      opacity: 0; }
+    .services-section__item-btn {
       position: absolute;
-      bottom: 50px;
-      left: 50px; }
-    .services-list li img {
-      width: 100%;
-      height: auto; }
+      bottom: 50px; }
+  .services-section__item:hover .services-section__item-title::after {
+    opacity: 1;
+    transition-duration: .3s; }
+  .services-section__item:hover .services-section__item-text {
+    opacity: 1;
+    transition-duration: .3s; }
+  .services-section__item-development-overlay {
+    border: none; }
+  .services-section__item-brand {
+    background: url(../img/brand.jpg) no-repeat center center/cover; }
+  .services-section__item-design {
+    background: url(../img/design.jpg) no-repeat center center/cover; }
+  .services-section__item-development {
+    background: url(../img/development.jpg) no-repeat center center/cover; }
+
+.portfolio-homepage {
+  margin-bottom: -20px;
+  padding: 0;
+  position: relative;
+  /*     overflow: hidden; */ }
+  .portfolio-homepage__list {
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 600px; }
+  .portfolio-homepage__item {
+    width: 100%;
+    background: url("../img/EP_BusinessCard.jpg") no-repeat center center/cover;
+    padding-top: 90px; }
+  .portfolio-homepage__content {
+    width: 440px;
+    background: #fff;
+    padding: 50px 60px; }
+  .portfolio-homepage__title {
+    margin-bottom: 40px; }
+  .portfolio-homepage__tags {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 500; }
+  .portfolio-homepage__text {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 500; }
+  .portfolio-homepage__next-box {
+    width: 250px;
+    height: 600px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url("../img/citeblue_features.png");
+    cursor: pointer; }
+  .portfolio-homepage__next-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.8); }
+  .portfolio-homepage__next-btn {
+    border: none;
+    background: none;
+    padding: 0;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 25px; }
+    .portfolio-homepage__next-btn .next {
+      display: block;
+      text-align: left;
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 8px; }
+    .portfolio-homepage__next-btn .next::after {
+      content: '';
+      width: 15px;
+      height: 9px;
+      background: url("../img/arrow-right-white.svg");
+      position: absolute;
+      right: 0;
+      top: 3px; }
+    .portfolio-homepage__next-btn .next-name {
+      font-size: 16px;
+      font-weight: 500; }
+  .portfolio-homepage__nav {
+    display: block;
+    text-align: center;
+    position: relative;
+    bottom: 45px; }
+    .portfolio-homepage__nav-item {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 5px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative; }
+    .portfolio-homepage__nav-item--active::before {
+      display: block;
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      left: 3px; }
+
+.team-section__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+.team-section__item {
+  width: 24%;
+  margin-bottom: 20px; }
+  .team-section__item img {
+    width: 100%; }
+.team-section .inline-section-header {
+  margin-bottom: 50px;
+  position: relative; }
+  .team-section .inline-section-header .title-small-lined {
+    position: relative;
+    padding: 0;
+    width: 200px;
+    background: #fff;
+    z-index: 2; }
+  .team-section .inline-section-header_link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0 0 20px;
+    z-index: 2; }
+  .team-section .inline-section-header_link::after {
+    display: inline-block;
+    content: '';
+    width: 15px;
+    height: 9px;
+    background: url("../img/arrow-right-orange.svg");
+    margin-left: 20px; }
+.team-section .inline-section-header::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: rgba(216, 216, 216, 0.5);
+  z-index: 1;
+  position: absolute;
+  top: 6px; }
+
+.what-we-do-section {
+  position: relative;
+  padding-top: 0; }
+  .what-we-do-section .right p {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 500; }
+  .what-we-do-section .inline-section-header {
+    margin-bottom: 50px;
+    height: 14px; }
+    .what-we-do-section .inline-section-header_link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 0 0 20px;
+      z-index: 2; }
+    .what-we-do-section .inline-section-header_link::after {
+      display: inline-block;
+      content: '';
+      width: 15px;
+      height: 9px;
+      background: url("../img/arrow-right-orange.svg");
+      margin-left: 20px; }
+  .what-we-do-section .inline-section-header::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: rgba(216, 216, 216, 0.5);
+    z-index: 1;
+    position: absolute;
+    top: 6px; }
 
 .portfolio-section__list {
   display: flex;
